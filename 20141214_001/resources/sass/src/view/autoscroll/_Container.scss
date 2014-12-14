@@ -1,0 +1,26 @@
+
+.autoscroll-panel {
+
+  .container-button {
+    text-align: center;
+    padding: 10px;
+    background-color: #f3f3f3;
+    margin: 8px;
+    @include border-radius(3px);
+  }
+
+  .cover-container {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin: 8px;
+    border-color: transparent;
+    height: 2.6em;
+    @include border-radius(3px);
+    .x-button-label {
+      color: #333;
+      font-family: 'Source Code Pro';
+    }
+  }
+
+}

@@ -1,0 +1,47 @@
+
+.app-trackslist {
+
+  @include app-ux-audiocover;
+
+  .x-audio-list-item {
+    padding: 5px 5px 0;
+  }
+
+  .x-track-info {
+    margin: 5px;
+
+    .artist {
+      font-size: 13px;
+      @include ellipsis;
+    }
+
+    .title {
+      font-size: 16px;
+      @include ellipsis;
+    }
+
+  }
+
+  .x-docked-top {
+    .x-field-input {
+      border-width: 0 0 1px 0;
+    }
+  }
+
+  // 検索条件がからの場合
+  .x-dataview-emptytext {
+    font-size: .8em;
+    line-height: 1.5;
+    padding: 20px;
+    text-align: center;
+
+    &:before {
+      content: ';(';
+      display: block;
+      font-size: 100px;
+      margin: 20px 0;
+      color: #666;
+    }
+  }
+
+}

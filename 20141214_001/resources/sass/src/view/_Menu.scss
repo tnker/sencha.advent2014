@@ -1,0 +1,38 @@
+
+.sidemenu {
+
+  background-color: #3c3c3c;
+
+  .x-button {
+    height: 2.7em;
+    border-width: 0 0 1px 0;
+    border-color: #353535;
+    background-color: transparent;
+    @include border-radius(0px);
+    //@include box-shadow(0 1px 0 #514949);
+    margin: 0 5px;
+
+    .x-button-label {
+      font-weight: 100;
+      color: #888;
+      text-align: left;
+      text-indent: 10px;
+    }
+    .x-button-icon {
+      color: #888;
+    }
+  }
+
+  .header {
+    background-color: #323232;
+    line-height: 25px;
+    font-size: 13px;
+    text-indent: 10px;
+    color: #999;
+    margin-top: -1px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

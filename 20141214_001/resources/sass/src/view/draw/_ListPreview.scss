@@ -1,0 +1,28 @@
+
+.app-drawlistpreview {
+
+  .x-dataview {
+    background-color: #f3f3f3;
+    @include box-shadow(1px 0 5px rgba(0,0,0,.1) inset);
+
+    .x-dataview-item {
+      $cover-size: 60px;
+      width: $cover-size;
+      height: $cover-size;
+      margin: 0 auto;
+
+      & > div {
+        width: $cover-size;
+        height: $cover-size;
+        background-size: cover;
+        background-repeat: no-repeat;
+        float: left;
+        margin: 2px;
+        @include border-radius(100%);
+      }
+
+    }
+
+  }
+
+}

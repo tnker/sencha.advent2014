@@ -1,0 +1,72 @@
+@import 'compass/css3';
+
+$font-family: 'Source Code Pro', '.HiraKakuInterface-W1', 'MotoyaLMaru';
+
+.app-html-template {
+
+    font-family: $font-family;
+
+    h1,h2,h3,h4,h5 {
+        text-align: center;
+        margin: .3em auto;
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+    h2 {
+        font-size: 2.4em;
+    }
+    h3 {
+        font-size: 1.4em;
+        text-align: left;
+        width: 90%;
+    }
+
+    pre {
+        background-color: #222;
+        color: #fff;
+        width: 90%;
+        margin: .1em auto .3em;
+        padding: .5em;
+        font-family: $font-family;
+        word-break: break-all;
+        white-space: pre-wrap;
+        letter-spacing: .1em;
+        @include border-radius(2px);
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+        font-size: 12.0em;
+        text-align: center;
+        margin: .2em 0;
+    }
+
+    .description {
+        width: 90%;
+        margin: .1em auto;
+        padding: .5em;
+        background-color: #f9f9f9;
+        color: #555;
+        font-size: 1.0em;
+        @include border-radius(2px);
+    }
+
+    .demo-button,
+    .normal-button {
+        font-family: $font-family;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        font-size: 1.3em;
+        padding: .5em;
+        margin-bottom: 2px;
+        background-image: none;
+        background-color: #f9f9f9;
+        border-color: transparent;
+        @include border-radius(2px);
+        &:active {
+            background-color: #ccc;
+        }
+    }
+}

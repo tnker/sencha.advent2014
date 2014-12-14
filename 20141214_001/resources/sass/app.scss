@@ -1,0 +1,65 @@
+// The following two lines import the default Sencha Touch theme. If you are building
+// a new theme, remove them and the add your own CSS on top of the base CSS (which
+// is already included in your app.json file).
+
+$include-pictos-font: false !default;
+$font-family: 'Source Code Pro';
+
+@import 'sencha-touch/cupertino';
+
+// @import 'sencha-touch/cupertino/all';
+// 必要なコンポーネントのみインポート
+
+// @import 'sencha-touch/cupertino/src/Class';
+// iOS7フォントの指定が邪魔なので差分のみ設定
+.x-layout-card-item {
+  background: $background-color;
+}
+@import 'sencha-touch/cupertino/src/SegmentedButton';
+@import 'sencha-touch/cupertino/src/MessageBox';
+@import 'sencha-touch/cupertino/src/Toolbar';
+@import 'sencha-touch/cupertino/src/Toast';
+@import 'sencha-touch/cupertino/src/Button';
+@import 'sencha-touch/cupertino/src/Sheet';
+@import 'sencha-touch/cupertino/src/Menu';
+@import 'sencha-touch/cupertino/src/Panel';
+@import 'sencha-touch/cupertino/src/Mask';
+@import 'sencha-touch/cupertino/src/carousel/Indicator';
+@import 'sencha-touch/cupertino/src/dataview/List';
+@import 'sencha-touch/cupertino/src/dataview/IndexBar';
+@import 'sencha-touch/cupertino/src/field/Field';
+@import 'sencha-touch/cupertino/src/field/Checkbox';
+@import 'sencha-touch/cupertino/src/field/Radio';
+@import 'sencha-touch/cupertino/src/field/Spinner';
+@import 'sencha-touch/cupertino/src/field/Slider';
+@import 'sencha-touch/cupertino/src/field/Select';
+@import 'sencha-touch/cupertino/src/field/TextArea';
+@import 'sencha-touch/cupertino/src/form/Panel';
+@import 'sencha-touch/cupertino/src/form/FieldSet';
+@import 'sencha-touch/cupertino/src/picker/Picker';
+@import 'sencha-touch/cupertino/src/plugin/PullRefresh';
+@import 'sencha-touch/cupertino/src/slider/Slider';
+@import 'sencha-touch/cupertino/src/slider/Toggle';
+@import 'sencha-touch/cupertino/src/tab/Panel';
+
+// Custom code goes here..
+
+@import '//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css';
+
+html, body {
+  font-family: $font-family;
+  background-color: #f9f9f9;
+}
+
+.fa {
+  text-align: center;
+}
+
+.viewport-inner {
+  @include transition(all, 0.2s);
+}
+
+@import 'src/all';
+
+// Examples of using the icon mixin:
+// @include icon('user');

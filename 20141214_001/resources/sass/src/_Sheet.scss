@@ -1,0 +1,19 @@
+
+.x-sheet-action {
+  background-color: transparent;
+  border-top: none;
+  @include box-shadow(none);
+
+  .x-button {
+    border: none;
+    height: 2.6em;
+    background-color: rgba(255,255,255,.95);
+
+    &:last-child {
+      .x-button-label {
+        font-weight: bold;
+      }
+    }
+  }
+
+}

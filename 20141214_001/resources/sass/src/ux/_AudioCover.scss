@@ -1,0 +1,128 @@
+
+@mixin app-ux-audiocover {
+
+  $size: 50px;
+  $margin: 5px;
+  $button-size: ($size * 46) / 100;
+  $button-icon-size: ($size * 15) / 100;
+
+  .x-ux-audiocover {
+
+    audio {
+      width: 0;
+    }
+
+    .x-flip-card {
+
+      width: $size;
+      height: $size;
+
+      @include transform-style(preserve-3d);
+      @include single-transition(transform, 1s);
+
+      .x-face {
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include backface-visibility(hidden);
+
+        &.x-front {
+          background-size: 100% 100% !important;
+          border: solid 1px #d4d4d4;
+        }
+
+        &.x-back {
+          @include display-box;
+          @include box-pack(center);
+          @include box-align(center);
+
+          @include rotateY(180deg);
+          @include box-sizing(border-box);
+
+          .x-button {
+            @include border-radius(100%);
+            @include box-shadow(0 0 1px rgba(0,0,0,.3));
+            max-height: $button-size;
+            width: $button-size;
+            height: $button-size;
+            border-color: #d4d4d4 !important;
+            padding: 0;
+
+            .x-button-icon {
+              width: $button-size;
+              height: $button-size;
+              text-align: center;
+              line-height: $button-size;
+              text-indent: -2px;
+              margin-top: -1px;
+
+              &:before {
+                font-size: 14px;
+              }
+            }
+
+          }
+
+          .x-progress, .x-progress .x-slice, .x-progress .x-slice div {
+            @include border-radius(100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $size - ($margin * 2);
+            height: $size - ($margin * 2);
+          }
+
+          .x-progress {
+            @include display-box;
+            @include box-pack(center);
+            @include box-align(center);
+            @include box-shadow(0 0 1px rgba(0,0,0,.3));
+
+            margin: $margin;
+            background-color: #f3f3f3;
+            border: solid 1px transparent;
+
+            .x-slice {
+
+              &.x-half {
+                clip: rect(0px, $size, $size, $size / 2 - $margin);
+                left: -1px;
+                top: -1px;
+
+                div {
+                  clip: rect(0px, $size / 2 - $margin , $size, 0);
+                  @include rotate(0deg);
+                }
+
+              }
+
+              &.x-end {
+                clip: rect(0px, $size / 2 - $margin, $size, 0);
+                left: -1px;
+                top: -1px;
+
+                div {
+                  clip: rect(0, $size / 2 - $margin , $size, 0);
+                  @include rotate(180deg);
+                }
+
+              }
+
+              div {
+                background-color: #3f89ee;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
